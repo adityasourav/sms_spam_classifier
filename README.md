@@ -152,19 +152,13 @@ files are generated and stored.
 
 ### Step 6: Prediction Phase
 
+During the prediction phase, a new SMS message entered by the user passes through multiple stages before classification.
+
 Prediction workflow:
 
-```text
-User Input
-     ↓
-Text Preprocessing
-     ↓
-TF-IDF Vectorization
-     ↓
-Machine Learning Model
-     ↓
-Spam / Not Spam
-```
+<p align="center">
+  <img src="images/Prediction_phase.png" width="1000">
+</p>
 
 ---
 
