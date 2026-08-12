@@ -4,26 +4,37 @@ import string
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
+
+# Download required NLTK resources if missing
+try:
+    nltk.data.find("tokenizers/punkt_tab")
+except LookupError:
+    nltk.download("punkt_tab", quiet=True)
+
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords", quiet=True)
+
+
 ps = PorterStemmer()
 
 
 def transform_text(text):
-
     text = str(text).lower()
 
     words = nltk.word_tokenize(text)
 
-    y=[]
+    filtered_words = []
 
     for word in words:
         if word.isalnum():
-            y.append(word)
+            filtered_words.append(word)
 
-    words = y[:]
-    y.clear()
+    processed_words = []
 
-    for word in words:
-        if word not in stopwords.words("english") and word not in string.punctuation:
-            y.append(ps.stem(word))
+    for word in filtered_words:
+        if word not in stopwords.words("english"):
+            processed_words.append(ps.stem(word))
 
-    return " ".join(y)
+    return " ".join(processed_words)
