@@ -4,6 +4,12 @@
   <img src="images/workflow.png" width="1000">
 </p>
 
+# Live Demo
+
+https://sms-spam-classifier-dmcj.onrender.com/
+
+---
+
 ## 📌 Project Summary
 
 SMS Spam Classifier is a Machine Learning and Natural Language Processing (NLP) based application that automatically detects whether a text message is **Spam 🚫** or **Not Spam ✅**.
