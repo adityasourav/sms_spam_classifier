@@ -6,7 +6,7 @@
 
 # Live Demo
 
-https://sms-spam-classifier-dmcj.onrender.com/
+https://smsspamclassifierr.streamlit.app/
 
 ---
 
